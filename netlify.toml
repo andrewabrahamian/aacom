@@ -7,3 +7,9 @@
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.71.1"
+
+[[redirects]]
+from = "https://andrewabrahamian.netlify.app/*"
+to = "https://www.andrewabrahamian.com/:splat"
+status = 301
+force = true
