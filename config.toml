@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "/"
 languageCode = "en-us"
-title = "Portfolio for Ted Laderas, PhD"
+title = "Andrew Abrahamian"
 theme = "forty"
 
 # Enter your tracking code to enable Google Analytics
@@ -19,8 +19,8 @@ disqusShortname = ""
   # CSS class.
 
   # Provide your metadata here.
-  name = "Ted Laderas"
-  description = "Portfolio/CV for Ted Laderas"
+  name = "Andrew Abrahamian"
+  description = "Portfolio/CV for Andrew Abrahamian"
 
   # Link custom assets relative to /static
   custom_css = []
@@ -39,8 +39,8 @@ disqusShortname = ""
 
   # Navigation Section
   [params.navigation]
-    title = "Ted Laderas, PhD"
-    subtitle = "Data Scientist, Educator, and Collaborator"
+    title = "Andrew Abrahamian"
+    subtitle = "Strategy, Analytics, & Data Science"
     menu = "Menu"
     # Optional logo as brand stored in img/
     # logo = "logo.png"
@@ -75,9 +75,9 @@ disqusShortname = ""
   [params.banner]
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
-    title = "Ted Laderas, PhD"
-    subtitle = "Portfolio of Data Science and Visualization Projects"
-    buttonText = "Curriculum Vitae"
+    title = "Andrew Abrahamian"
+    subtitle = "Portfolio of Strategy & Data Science Projects"
+    buttonText = "Resume"
     url = "cv/"
 
 
@@ -200,48 +200,33 @@ disqusShortname = ""
     # by copying the corresponding map with frontmatter code.
     [[params.contact.email]]
     title = "Email"
-    email = "tedladeras (at) gmail.com"
+    email = "andrew.abrahamian (at) gmail.com"
 
     [[params.contact.phone]]
     title = "Phone"
-    phone = "(000) 000-0000 x1234"
+    phone = "(774) 641-4927"
 
     [[params.contact.address]]
-    title = "Address"
-    street = "3181 SW Sam Jackson Road"
-    city = "Portland, OR 97212"
+    title = "Location"
+    #street = "3181 SW Sam Jackson Road"
+    city = "Boston, MA"
     country = "USA"
 
   # Footer section
   [params.footer]
     enable = true
-    copyright = "Ted Laderas"
+    copyright = "Andrew Abrahamian"
 
     # Uses font awesome icons
     [[params.footer.social]]
-      icon = "fa-twitter"
-      url= "https://www.twitter.com/tladeras"
-      label = "Twitter"
-
-    #[[params.footer.social]]
-     # icon = "fa-facebook"
-      #url= "https://www.facebook.com"
-      #label = "Facebook"
-
-    #[[params.footer.social]]
-     # icon = "fa-instagram"
-      #url= "https://www.instagram.com"
-      #label = "Instagram"
+      icon = "fa-linkedin"
+      url= "https://www.linkedin.com/in/andrew-abrahamian"
+      label = "LinkedIn"
     
     [[params.footer.social]]
       icon = "fa-github"
-      url= "https://www.github.com/laderast"
+      url= "https://www.github.com/andrewabrahamian"
       label = "GitHub"
-
-    [[params.footer.social]]
-      icon = "fa-linkedin"
-      url= "https://www.linkedin.com/in/ted-laderas-0714a92/"
-      label = "LinkedIn"
 
     [[params.footer.quicklinks]]
       text = "Design: "
