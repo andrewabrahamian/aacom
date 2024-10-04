@@ -50,6 +50,10 @@ disqusShortname = ""
       url = "#"
 
     [[params.navigation.links]]
+      name = "About Me"
+      url = "about"
+
+    [[params.navigation.links]]
       name = "Blog"
       url = "blogs"
 
@@ -208,7 +212,6 @@ disqusShortname = ""
 
     [[params.contact.address]]
     title = "Location"
-    #street = "3181 SW Sam Jackson Road"
     city = "Boston, MA"
     country = "USA"
 
