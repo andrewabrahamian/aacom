@@ -91,25 +91,25 @@ disqusShortname = ""
     # Display your showcases here.
     [[params.tiles.showcase]]
       title = "DIVITIAE.AI"
-      subtitle = "A financial intelligence platform empowering retail investors with an efficient, evidence-based investment tools"
+      subtitle = "A financial intelligence platform empowering retail investors with efficient, evidence-based investment tools"
       url = "https://divitiae.squarespace.com/solution"
       image = "projects/divitiae.png"
     
     [[params.tiles.showcase]]
       title = "Predicting Flight Delays"
-      subtitle = "Predicting delayed flights in 5Y airline and weather dataset"
+      subtitle = "Predicting delayed flights using a five-year airline and weather dataset"
       url = "https://andrewabrahamian.github.io/predicting_flight_delays/team_3-3_phase_3_report_w261_final_project.html"
       image = "projects/flight_delay_prediction.png"
     
     [[params.tiles.showcase]]
       title = "Forecasting Wine Prices"
-      subtitle = "Hypothesis Testing and EDA of Wine Ratings dataset"
+      subtitle = "Hypothesis Testing and EDA of a wine ratings dataset"
       url = "projects/wine_model_building"
       image = "projects/wine_model_building.png"
 
     [[params.tiles.showcase]]
       title = "Evaluation of Price Determinants of California Wine"
-      subtitle = "Predicing Prices of California Wine"
+      subtitle = "Predicting Prices of California Wine"
       url = "projects/wine_model_final"
       image = "projects/wine_model_final.png"
 
@@ -118,6 +118,12 @@ disqusShortname = ""
       subtitle = "A novel approach to summarizing earnings call transcripts with LLMs"
       url = "https://github.com/andrewabrahamian/ectqa/blob/main/ECTQA_w266_summer_2023_Abrahamian_Azinge.pdf"
       image = "projects/ectqa.png"
+
+    [[params.tiles.showcase]]
+      title = "Classifying Images with CIFAR-10"
+      subtitle = "Developing novel CNNs to classify images in the CIFAR-10 dataset"
+      url = "projects/cifar_10_analysis"
+      image = "projects/cifar_10.png"
 
     #[[params.tiles.showcase]]
     #  title = "Lesser Known Tidyverse Functions"
