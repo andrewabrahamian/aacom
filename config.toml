@@ -91,10 +91,22 @@ disqusShortname = ""
     # Display your showcases here.
     [[params.tiles.showcase]]
       title = "Predicting Flight Delays"
-      subtitle = "Predicting delayed flights in large-scale dataset"
+      subtitle = "Predicting delayed flights in 5Y airline and weather dataset"
       url = "https://andrewabrahamian.github.io/predicting_flight_delays/team_3-3_phase_3_report_w261_final_project.html"
       image = "projects/flight_delay_prediction.png"
     
+    [[params.tiles.showcase]]
+      title = "Forecasting Wine Prices"
+      subtitle = "Hypothesis Testing and EDA of Wine Ratings dataset"
+      url = "projects/wine_model_building"
+      image = "projects/wine_model_building.png"
+
+    [[params.tiles.showcase]]
+      title = "Evaluation Price Determinants of California Wine"
+      subtitle = "Predicing Prices of California Wine"
+      url = "projects/wine_model_final"
+      image = "projects/wine_model_final.png"
+
     #[[params.tiles.showcase]]
     #  title = "Lesser Known Tidyverse Functions"
     #  subtitle = "Parsing a twitter thread about tidyverse functions"
