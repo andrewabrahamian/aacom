@@ -90,6 +90,12 @@ disqusShortname = ""
     enable = true
     # Display your showcases here.
     [[params.tiles.showcase]]
+      title = "DIVITIAE.AI"
+      subtitle = "A financial intelligence platform empowering retail investors with an efficient, evidence-based investment tools"
+      url = "https://divitiae.squarespace.com/solution"
+      image = "projects/divitiae.png"
+    
+    [[params.tiles.showcase]]
       title = "Predicting Flight Delays"
       subtitle = "Predicting delayed flights in 5Y airline and weather dataset"
       url = "https://andrewabrahamian.github.io/predicting_flight_delays/team_3-3_phase_3_report_w261_final_project.html"
