@@ -122,7 +122,7 @@ disqusShortname = ""
     [[params.tiles.showcase]]
       title = "Classifying Images with CIFAR-10"
       subtitle = "Developing novel CNNs to classify images in the CIFAR-10 dataset"
-      url = "projects/cifar_10_analysis"
+      url = "projects/cifar10_analysis"
       image = "projects/cifar_10.png"
 
     #[[params.tiles.showcase]]
