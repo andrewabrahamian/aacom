@@ -129,7 +129,7 @@ disqusShortname = ""
       title = "Cheating at Scrabble"
       subtitle = "Implementing a function that prints all valid Scrabble words given a set of letters"
       url = "https://github.com/andrewabrahamian/scrabble"
-      image = "projects/scrabble.jpeg"
+      image = "projects/scrabble.jpg"
 
     #[[params.tiles.showcase]]
     #  title = "Lesser Known Tidyverse Functions"
