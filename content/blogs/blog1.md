@@ -3,15 +3,13 @@ categories:
 - ""
 - ""
 date: "`r Sys.Date()`"
-description: ""
+description: "The future of AI computing in the Data Center hinges on data scientist and developer preferences. Below is a brief analysis of three key themes analyzing this dynamic."
 draft: false
 image: IMG_6142.jpg
 keywords: ""
 slug: ipsum
 title: Future of AI Computing in the Data Center
 ---
-
-The future of AI computing in the Data Center hinges on data scientist and developer preferences. Below is a brief analysis of three key themes analyzing this dynamic.
 
 **Data Scientist & developer focus on abstraction layers in the AI SW stack is accelerating:**
 Data scientists & developers are highly influential in AI infrastructure purchase decision-making due to their expertise in evaluating and recommending AI software and solution stacks.  With over most AI/ML developers working in the frameworks layer of the AI software stack, AI infrastructure purchasing decisions are increasingly oriented toward the top-of-the-stack with particular focus on solutions optimized for application, serving, and development framework compatibility. The market has consolidated around such abstractions such as PyTorch for development, vLLM/TGI for inference, LangChain/LlamaIndex for RAG, Triton as a Python-native GPU compiler, among others. This leads developers to prefer a unified software model for their work supporting multiple frameworks and tools based on unique projects and solutions that abstract throughout hardware products and architectures seamlessly.
