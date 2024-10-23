@@ -5,7 +5,7 @@ categories:
 date: "`r Sys.Date()`"
 description: "The future of AI computing in the Data Center hinges on data scientist and developer preferences. Below is a brief analysis of three key themes analyzing this dynamic."
 draft: false
-image:
+image: img_666.jpg
 keywords: ""
 slug: ipsum
 title: Future of AI Computing in the Data Center
