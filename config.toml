@@ -125,6 +125,12 @@ disqusShortname = ""
       url = "projects/cifar10_analysis"
       image = "projects/cifar_10.png"
 
+    [[params.tiles.showcase]]
+      title = "Cheating at Scrabble"
+      subtitle = "Implementing a function that prints all valid Scrabble words given a set of letters"
+      url = "https://github.com/andrewabrahamian/scrabble"
+      image = "projects/scrabble.jpeg"
+
     #[[params.tiles.showcase]]
     #  title = "Lesser Known Tidyverse Functions"
     #  subtitle = "Parsing a twitter thread about tidyverse functions"
