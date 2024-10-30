@@ -117,7 +117,7 @@ disqusShortname = ""
       title = "Tuning CNNs to Detect Diabetic Retinopathy"
       subtitle = "Implementing CNNs to detect diabetic retinopathy in retina images"
       url = "https://github.com/andrewabrahamian/ectqa/blob/main/ECTQA_w266_summer_2023_Abrahamian_Azinge.pdf"
-      image = "https://ocretina.net/wp-content/uploads/diabetic-retinopathy-chart.jpg"
+      image = "projects/diabetic-retinopathy-chart.jpg"
 
 
     [[params.tiles.showcase]]
