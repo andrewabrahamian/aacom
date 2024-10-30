@@ -110,13 +110,13 @@ disqusShortname = ""
     [[params.tiles.showcase]]
       title = "ECTQA: Expanding Earnings Call Transcript Summarization"
       subtitle = "A novel approach to summarizing earnings call transcripts with LLMs"
-      url = "https://github.com/andrewabrahamian/cnn_dr_detection"
+      url = "https://github.com/andrewabrahamian/ectqa/blob/main/ECTQA_w266_summer_2023_Abrahamian_Azinge.pdf"
       image = "projects/ectqa.png"
 
     [[params.tiles.showcase]]
       title = "Tuning CNNs to Detect Diabetic Retinopathy"
       subtitle = "Implementing CNNs to detect diabetic retinopathy in retina images"
-      url = "https://github.com/andrewabrahamian/ectqa/blob/main/ECTQA_w266_summer_2023_Abrahamian_Azinge.pdf"
+      url = "https://github.com/andrewabrahamian/cnn_dr_detection"
       image = "projects/diabetic-retinopathy-chart.jpg"
 
 
