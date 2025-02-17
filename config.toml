@@ -282,7 +282,7 @@ disqusShortname = ""
 
     [[params.footer.social]]
       icon = "fa-file-text"
-      url= "https://github.com/andrewabrahamian/personal/blob/c6197a028c7bdf11c48bec13cc8306a942fa63c6/Andrew%20Abrahamian%20-%20Resume%20(24-10-17).pdf"
+      url= "https://github.com/andrewabrahamian/personal/blob/main/Andrew%20Abrahamian%20-%20Resume%20(25-02-17).pdf"
       label = "Resume"
 
     [[params.footer.quicklinks]]
