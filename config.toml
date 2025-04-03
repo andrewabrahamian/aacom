@@ -279,6 +279,11 @@ disqusShortname = ""
       icon = "fa-github"
       url= "https://www.github.com/andrewabrahamian"
       label = "GitHub"
+    
+    [[params.footer.social]]
+      icon = "fa-twitter"
+      url= "https://x.com/armobrah"
+      label = "Twitter"
 
     [[params.footer.social]]
       icon = "fa-file-text"
