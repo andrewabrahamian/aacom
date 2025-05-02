@@ -138,6 +138,12 @@ disqusShortname = ""
       url = "https://github.com/andrewabrahamian/scrabble"
       image = "projects/scrabble.jpg"
 
+      [[params.tiles.showcase]]
+      title = "Training Language Models for Sentiment Classification"
+      subtitle = "Training language models to classify sentiment of IMDB movie reviews with learned embeddings"
+      url = "https://github.com/andrewabrahamian/text_embeddings"
+      image = "projects/text_embeddings.jpg"
+
     #[[params.tiles.showcase]]
     #  title = "Lesser Known Tidyverse Functions"
     #  subtitle = "Parsing a twitter thread about tidyverse functions"
