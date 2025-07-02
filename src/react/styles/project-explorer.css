@@ -1,0 +1,134 @@
+#project-explorer-root {
+  min-height: 2rem;
+}
+
+.project-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.project-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.project-control span {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted, #6b7280);
+}
+
+.project-control input,
+.project-control select {
+  min-height: 2.75rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--line, #d1d5db);
+  background: var(--surface, #ffffff);
+  color: var(--ink, #0f172a);
+  padding: 0 0.8rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.project-card {
+  border: 1px solid var(--line, #d1d5db);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--surface, #ffffff);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  animation: card-enter 400ms ease both;
+}
+
+.project-card-image-link {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.project-card:hover .project-card-image,
+.project-card:focus-within .project-card-image {
+  transform: scale(1.04);
+}
+
+.project-card-body {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.project-card-body h3 {
+  margin-bottom: 0.55rem;
+}
+
+.project-card-body h3 a {
+  border-bottom: none;
+  color: var(--ink, #0f172a);
+}
+
+.project-card-body p {
+  margin-bottom: 0.8rem;
+  color: var(--muted, #6b7280);
+  line-height: 1.45;
+}
+
+.project-tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.project-tag-list li {
+  border: 1px solid var(--line, #d1d5db);
+  background: var(--surface-soft, #f8fafc);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted, #6b7280);
+}
+
+.project-empty {
+  margin: 0;
+  color: var(--muted, #6b7280);
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .project-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-controls {
+    grid-template-columns: 1fr;
+  }
+}

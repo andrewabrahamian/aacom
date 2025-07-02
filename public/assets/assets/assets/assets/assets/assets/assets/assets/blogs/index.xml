@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Thoughts on AI, Data Science, Strategy &amp; Technology on Andrew Abrahamian</title>
+    <link>/blogs/</link>
+    <description>Recent content in My Thoughts on AI, Data Science, Strategy &amp; Technology on Andrew Abrahamian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Oct 2017 22:27:21 -0500</lastBuildDate>
+    
+	<atom:link href="/blogs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How developers influence AI hardware investment decisions</title>
+      <link>/blogs/ipsum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blogs/ipsum/</guid>
+      <description>Data Scientist &amp;amp; developer focus on abstraction layers in the AI SW stack is accelerating:
+Data scientists &amp;amp; developers are highly influential in AI infrastructure purchase decision-making due to their expertise in evaluating and recommending AI software and solution stacks. With most AI/ML developers working in the frameworks layer of the AI software stack, AI infrastructure purchasing decisions are increasingly oriented toward the top-of-the-stack with particular focus on solutions optimized for application, serving, and development framework compatibility.</description>
+    </item>
+    
+  </channel>
+</rss>

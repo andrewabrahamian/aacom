@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "/"
 languageCode = "en-us"
-title = "Andrew Abrahamian"
+title = "andrew abrahamian"
 theme = "forty"
 
 # Enter your tracking code to enable Google Analytics
@@ -19,11 +19,11 @@ disqusShortname = ""
   # CSS class.
 
   # Provide your metadata here.
-  name = "Andrew Abrahamian"
-  description = "Portfolio/CV for Andrew Abrahamian"
+  name = "andrew abrahamian"
+  description = "Portfolio/CV for andrew abrahamian"
 
   # Link custom assets relative to /static
-  custom_css = []
+  custom_css = ["css/modern-theme.css"]
   custom_js  = []
   favicon    = "favicon.ico"
 
@@ -39,23 +39,23 @@ disqusShortname = ""
 
   # Navigation Section
   [params.navigation]
-    title = "Andrew Abrahamian"
-    subtitle = "Strategy, Analytics, & Data Science"
-    menu = "Menu"
+    title = "andrew abrahamian"
+    subtitle = "STRATEGY, ANALYTICS, & DATA SCIENCE"
+    menu = "MENU"
     # Optional logo as brand stored in img/
     # logo = "logo.png"
 
     [[params.navigation.links]]
-      name = "Home"
+      name = "HOME"
       url = "#"
 
     #[[params.navigation.links]]
     #  name = "About Me"
     #  url = "about"
 
-    [[params.navigation.links]]
-      name = "Blog"
-      url = "blogs"
+    #[[params.navigation.links]]
+    #  name = "BLOG"
+    #  url = "blogs"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste
@@ -79,10 +79,9 @@ disqusShortname = ""
   [params.banner]
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
-    title = "Andrew Abrahamian"
-    subtitle = "Portfolio of Strategy & Data Science Projects"
-    #buttonText = "Resume"
-    #url = "https://github.com/andrewabrahamian/personal/blob/main/Andrew%20Abrahamian%20-%20Resume%20(25-04-30).pdf"
+    title = "andrew abrahamian"
+    subtitle = "PORTFOLIO OF STRATEGY & DATA SCIENCE PROJECTS"
+    buttonText = ""
 
 
   # Tiles Section
@@ -237,7 +236,7 @@ disqusShortname = ""
 
   # Contact section
   [params.contact]
-    enable = true
+    enable = false
     buttonSend = "Send message"
     buttonClear = "Clear"
 
@@ -277,6 +276,11 @@ disqusShortname = ""
 
     # Uses font awesome icons
     [[params.footer.social]]
+      icon = "fa-envelope"
+      url= "mailto:andrew.abrahamian@gmail.com"
+      label = "Email"
+
+    [[params.footer.social]]
       icon = "fa-linkedin"
       url= "https://www.linkedin.com/in/andrew-abrahamian"
       label = "LinkedIn"
@@ -293,7 +297,7 @@ disqusShortname = ""
 
     [[params.footer.social]]
       icon = "fa-file-text"
-      url= "https://github.com/andrewabrahamian/personal/blob/main/Andrew%20Abrahamian%20-%20Resume%20(25-04-30).pdf"
+      url= "https://github.com/andrewabrahamian/personal/blob/main/Andrew%20Abrahamian%20-%20Resume%20(25-06-30).pdf"
       label = "Resume"
 
     [[params.footer.quicklinks]]

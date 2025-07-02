@@ -6,6 +6,16 @@
             </header>
             <div class="content">
                 <p>{{ .Site.Params.Banner.subtitle }}</p>
+                {{ if .Site.Params.Banner.buttonText }}
+                {{ $bannerURL := .Site.Params.Banner.url | default "#project-explorer" }}
+                <ul class="actions">
+                    {{ if hasPrefix $bannerURL "#" }}
+                    <li><a href="{{ $bannerURL }}" class="button next scrolly">{{ .Site.Params.Banner.buttonText }}</a></li>
+                    {{ else }}
+                    <li><a href="{{ $bannerURL | absURL }}" class="button next scrolly">{{ .Site.Params.Banner.buttonText }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
             </div>
         </div>
     </section>

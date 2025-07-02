@@ -1,0 +1,16 @@
+{{ $projects := .Site.Data.projects }}
+{{ if not $projects }}
+  {{ $projects = .Site.Params.Tiles.showcase }}
+{{ end }}
+{{ if gt (len $projects) 0 }}
+<section id="project-explorer" aria-labelledby="project-explorer-heading">
+  <div class="inner">
+    <header class="major">
+      <h2 id="project-explorer-heading">PROJECT EXPLORER</h2>
+      <p>SEARCH, FILTER, AND SORT PROJECTS BY FOCUS AREA AND RECENCY.</p>
+    </header>
+    <div id="project-explorer-root" data-static-target="project-tiles-static"></div>
+    <script id="project-data" type="application/json">{{ $projects | jsonify | safeHTML }}</script>
+  </div>
+</section>
+{{ end }}

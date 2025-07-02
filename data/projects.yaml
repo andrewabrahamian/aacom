@@ -1,0 +1,99 @@
+- id: divitiae-ai
+  title: DIVITIAE.AI
+  subtitle: A financial intelligence platform empowering retail investors with efficient, evidence-based investment tools
+  url: https://divitiae.squarespace.com/solution
+  image: projects/divitiae.png
+  tags:
+    - product
+    - fintech
+    - strategy
+  featured: true
+  date: "2025-01-15"
+
+- id: predicting-flight-delays
+  title: Predicting Flight Delays
+  subtitle: Predicting delayed flights using a five-year airline and weather dataset
+  url: https://andrewabrahamian.github.io/predicting_flight_delays/team_3-3_phase_3_report_w261_final_project.html
+  image: projects/flight_delay_prediction.png
+  tags:
+    - machine-learning
+    - forecasting
+    - python
+  featured: true
+  date: "2024-11-10"
+
+- id: wine-price-determinants
+  title: Evaluation of Price Determinants of California Wine
+  subtitle: Predicting prices of California wine
+  url: projects/wine_model_final
+  image: projects/wine_model_final.png
+  tags:
+    - regression
+    - r
+    - statistics
+  date: "2023-08-30"
+
+- id: ectqa
+  title: "ECTQA: Expanding Earnings Call Transcript Summarization"
+  subtitle: A novel approach to summarizing earnings call transcripts with LLMs
+  url: https://github.com/andrewabrahamian/ectqa/blob/main/ECTQA_w266_summer_2023_Abrahamian_Azinge.pdf
+  image: projects/ectqa.png
+  tags:
+    - llm
+    - nlp
+    - finance
+  date: "2023-07-21"
+
+- id: diabetic-retinopathy-cnn
+  title: Tuning CNNs to Detect Diabetic Retinopathy
+  subtitle: Implementing CNNs to detect diabetic retinopathy in retina images
+  url: https://github.com/andrewabrahamian/cnn_dr_detection
+  image: projects/diabetic-retinopathy-chart.jpg
+  tags:
+    - deep-learning
+    - cnn
+    - healthcare
+  date: "2023-05-12"
+
+- id: wine-price-forecasting
+  title: Forecasting Wine Prices
+  subtitle: Hypothesis testing and EDA of a wine ratings dataset
+  url: projects/wine_model_building
+  image: projects/wine_model_building.png
+  tags:
+    - statistics
+    - eda
+    - r
+  date: "2023-03-18"
+
+- id: cifar-10-classification
+  title: Classifying Images with CIFAR-10
+  subtitle: Developing novel CNNs to classify images in the CIFAR-10 dataset
+  url: projects/cifar10_analysis
+  image: projects/cifar_10.png
+  tags:
+    - deep-learning
+    - computer-vision
+    - cnn
+  date: "2022-11-09"
+
+- id: scrabble-solver
+  title: Cheating at Scrabble
+  subtitle: Implementing a function that prints all valid Scrabble words given a set of letters
+  url: https://github.com/andrewabrahamian/scrabble
+  image: projects/scrabble.jpg
+  tags:
+    - algorithms
+    - python
+  date: "2022-09-22"
+
+- id: imdb-sentiment-embeddings
+  title: Training Language Models for Sentiment Classification
+  subtitle: Training language models to classify sentiment of IMDB movie reviews with learned embeddings
+  url: https://github.com/andrewabrahamian/text_embeddings
+  image: projects/text_embeddings.jpg
+  tags:
+    - nlp
+    - embeddings
+    - deep-learning
+  date: "2022-07-14"

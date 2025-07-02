@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
+:root {
+  --ink: #0f172a;
+  --muted: #475569;
+  --surface: #ffffff;
+  --surface-soft: #f5f7fb;
+  --line: #cbd5e1;
+  --accent: #0f766e;
+  --accent-2: #0369a1;
+  --hero-top: #ecfeff;
+  --hero-bottom: #f8fafc;
+}
+
+body {
+  color: var(--ink);
+  background: radial-gradient(circle at 0% 0%, #f8fafc 0, #eef2ff 38%, #f8fafc 70%);
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Serif 4", Georgia, serif;
+  letter-spacing: 0;
+}
+
+#header .logo strong {
+  letter-spacing: 0.04em;
+}
+
+#banner.major {
+  background-image: linear-gradient(132deg, var(--hero-top) 0%, var(--hero-bottom) 100%), url("/img/banner.jpg");
+  background-blend-mode: multiply;
+}
+
+#banner .content p {
+  color: rgba(15, 23, 42, 0.9);
+  max-width: 44rem;
+}
+
+#banner .inner .major h1 {
+  color: #0b1324;
+}
+
+#project-explorer {
+  display: none;
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.js-enhanced #project-explorer {
+  display: block;
+  animation: reveal-up 480ms ease both;
+}
+
+#project-explorer .inner {
+  padding: 4rem 0 2rem;
+}
+
+#project-tiles-static[hidden] {
+  display: none;
+}
+
+#project-tiles-static article {
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+#project-tiles-static article:hover,
+#project-tiles-static article:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 36px rgba(15, 23, 42, 0.22);
+}
+
+#contact {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.92), #eef2ff);
+  border-top: 1px solid var(--line);
+}
+
+#footer {
+  background: #0f172a;
+}
+
+#footer .copyright,
+#footer .icons a {
+  color: rgba(241, 245, 249, 0.9);
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  border-radius: 999px;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
