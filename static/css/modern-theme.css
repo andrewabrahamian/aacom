@@ -54,12 +54,12 @@ h6 {
 }
 
 #banner .content p {
-  color: rgba(15, 23, 42, 0.9);
+  color: #ffffff;
   max-width: 44rem;
 }
 
 #banner .inner .major h1 {
-  color: #0b1324;
+  color: #ffffff;
 }
 
 #project-explorer {
