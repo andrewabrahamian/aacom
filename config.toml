@@ -93,6 +93,12 @@ disqusShortname = ""
       subtitle = "A financial intelligence platform empowering retail investors with efficient, evidence-based investment tools"
       url = "https://divitiae.squarespace.com/solution"
       image = "projects/divitiae.png"
+
+    [[params.tiles.showcase]]
+      title = "Second Brain Blueprint"
+      subtitle = "Codex + Obsidian knowledge workflow"
+      url = "https://github.com/andrewabrahamian/second-brain-public-blueprint"
+      image = "projects/second-brain.jpg"
     
     [[params.tiles.showcase]]
       title = "Predicting Flight Delays"
