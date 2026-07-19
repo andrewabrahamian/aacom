@@ -2,15 +2,13 @@
 {{ if not $projects }}
   {{ $projects = .Site.Params.Tiles.showcase }}
 {{ end }}
+{{ $profile := .Site.Data.profile }}
 {{ if gt (len $projects) 0 }}
-<section id="project-explorer" aria-labelledby="project-explorer-heading">
+<section id="project-explorer" class="site-demo-section" aria-labelledby="project-explorer-heading">
   <div class="inner">
-    <header class="major">
-      <h2 id="project-explorer-heading">PROJECT EXPLORER</h2>
-      <p>SEARCH, FILTER, AND SORT PROJECTS BY FOCUS AREA AND RECENCY.</p>
-    </header>
     <div id="project-explorer-root" data-static-target="project-tiles-static"></div>
     <script id="project-data" type="application/json">{{ $projects | jsonify | safeHTML }}</script>
+    <script id="profile-data" type="application/json">{{ $profile | jsonify | safeHTML }}</script>
   </div>
 </section>
 {{ end }}

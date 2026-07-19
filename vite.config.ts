@@ -3,8 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  publicDir: false,
   build: {
-    outDir: "static/assets",
+    outDir: "static/demo-assets",
     emptyOutDir: true,
     cssCodeSplit: false,
     rollupOptions: {

@@ -1,99 +1,182 @@
+- id: second-brain-public-blueprint
+  title: Second Brain Blueprint
+  subtitle: A public-safe Codex and Obsidian workflow for durable notes, repeatable research systems, and live monitoring without exposing private knowledge.
+  url: https://github.com/andrewabrahamian/second-brain-public-blueprint
+  repo: andrewabrahamian/second-brain-public-blueprint
+  image: projects/second-brain.jpg
+  tags:
+    - knowledge-systems
+    - codex
+    - automation
+  kind: Workflow system
+  stage: Active public blueprint
+  language: Markdown
+  featured: true
+  date: "2026-06-21"
+
+- id: ai-infra-model
+  title: AI Infrastructure Model
+  subtitle: Modeling AI infrastructure capacity, constraints, and strategic implications for compute supply chains.
+  url: https://github.com/andrewabrahamian/ai-infra-model
+  repo: andrewabrahamian/ai-infra-model
+  tags:
+    - ai-infrastructure
+    - strategy
+    - python
+  kind: Strategy model
+  stage: Active research
+  language: Python
+  featured: true
+  date: "2025-11-02"
+
+- id: competitive-ecosystem-watch
+  title: Competitive Ecosystem Watch
+  subtitle: Standalone AI infrastructure market-intelligence app for tracking companies, signals, deals, capacity, and source-backed briefs with metadata-only shared research sync.
+  url: https://github.com/andrewabrahamian/competitive-ecosystem-watch
+  repo: andrewabrahamian/competitive-ecosystem-watch
+  tags:
+    - ai-infrastructure
+    - strategy
+    - competitive-intelligence
+    - research-systems
+  kind: Market intelligence app
+  stage: Private code/UI repo
+  language: Next.js
+  featured: true
+  date: "2026-07-03"
+
 - id: divitiae-ai
   title: DIVITIAE.AI
-  subtitle: A financial intelligence platform empowering retail investors with efficient, evidence-based investment tools
+  subtitle: A financial intelligence platform concept for retail investors using evidence-based investment tooling.
   url: https://divitiae.squarespace.com/solution
   image: projects/divitiae.png
   tags:
     - product
     - fintech
     - strategy
+  kind: Product concept
+  stage: Portfolio feature
+  language: Product
   featured: true
   date: "2025-01-15"
 
-- id: predicting-flight-delays
-  title: Predicting Flight Delays
-  subtitle: Predicting delayed flights using a five-year airline and weather dataset
-  url: https://andrewabrahamian.github.io/predicting_flight_delays/team_3-3_phase_3_report_w261_final_project.html
-  image: projects/flight_delay_prediction.png
-  tags:
-    - machine-learning
-    - forecasting
-    - python
-  featured: true
-  date: "2024-11-10"
-
-- id: wine-price-determinants
-  title: Evaluation of Price Determinants of California Wine
-  subtitle: Predicting prices of California wine
-  url: projects/wine_model_final
-  image: projects/wine_model_final.png
-  tags:
-    - regression
-    - r
-    - statistics
-  date: "2023-08-30"
-
 - id: ectqa
-  title: "ECTQA: Expanding Earnings Call Transcript Summarization"
-  subtitle: A novel approach to summarizing earnings call transcripts with LLMs
+  title: ECTQA
+  subtitle: Earnings call transcript question-answering and summarization with large language models.
   url: https://github.com/andrewabrahamian/ectqa/blob/main/ECTQA_w266_summer_2023_Abrahamian_Azinge.pdf
+  repo: andrewabrahamian/ectqa
   image: projects/ectqa.png
   tags:
     - llm
     - nlp
     - finance
-  date: "2023-07-21"
+  kind: NLP research
+  stage: Berkeley MIDS project
+  language: Jupyter Notebook
+  featured: true
+  date: "2024-10-02"
 
-- id: diabetic-retinopathy-cnn
-  title: Tuning CNNs to Detect Diabetic Retinopathy
-  subtitle: Implementing CNNs to detect diabetic retinopathy in retina images
+- id: predicting-flight-delays
+  title: Predicting Flight Delays
+  subtitle: Delayed-flight prediction using a five-year airline and weather dataset.
+  url: https://andrewabrahamian.github.io/predicting_flight_delays/team_3-3_phase_3_report_w261_final_project.html
+  repo: andrewabrahamian/predicting_flight_delays
+  image: projects/flight_delay_prediction.png
+  tags:
+    - machine-learning
+    - forecasting
+    - python
+  kind: Applied ML
+  stage: Berkeley MIDS project
+  language: HTML
+  featured: true
+  date: "2024-10-02"
+
+- id: cnn-dr-detection
+  title: CNN Diabetic Retinopathy Detection
+  subtitle: Convolutional neural network experiments for detecting diabetic retinopathy in retina imagery.
   url: https://github.com/andrewabrahamian/cnn_dr_detection
+  repo: andrewabrahamian/cnn_dr_detection
   image: projects/diabetic-retinopathy-chart.jpg
   tags:
     - deep-learning
-    - cnn
+    - computer-vision
     - healthcare
-  date: "2023-05-12"
+  kind: Computer vision
+  stage: Model tuning
+  language: Jupyter Notebook
+  date: "2024-10-30"
 
-- id: wine-price-forecasting
-  title: Forecasting Wine Prices
-  subtitle: Hypothesis testing and EDA of a wine ratings dataset
-  url: projects/wine_model_building
-  image: projects/wine_model_building.png
+- id: azure-ml-app
+  title: Azure ML App
+  subtitle: Python app work for applied machine learning deployment and cloud-hosted model workflows.
+  url: https://github.com/andrewabrahamian/azure_ml_app
+  repo: andrewabrahamian/azure_ml_app
+  image: projects/deploy1.png
   tags:
-    - statistics
-    - eda
+    - mlops
+    - python
+    - cloud
+  kind: Deployment app
+  stage: Prototype
+  language: Python
+  date: "2024-10-02"
+
+- id: wine-price-determinants
+  title: California Wine Price Determinants
+  subtitle: Regression and exploratory modeling around the price determinants of California wine.
+  url: https://github.com/andrewabrahamian/cali_wine_price_prediction
+  repo: andrewabrahamian/cali_wine_price_prediction
+  image: projects/wine_model_final.png
+  tags:
+    - regression
     - r
-  date: "2023-03-18"
+    - statistics
+  kind: Statistical modeling
+  stage: Analysis
+  language: R
+  date: "2024-10-02"
 
 - id: cifar-10-classification
-  title: Classifying Images with CIFAR-10
-  subtitle: Developing novel CNNs to classify images in the CIFAR-10 dataset
-  url: projects/cifar10_analysis
+  title: CIFAR-10 Image Classification
+  subtitle: CNN experiments for classifying CIFAR-10 images.
+  url: https://github.com/andrewabrahamian/cifar_10_img_classification
+  repo: andrewabrahamian/cifar_10_img_classification
   image: projects/cifar_10.png
   tags:
     - deep-learning
     - computer-vision
     - cnn
-  date: "2022-11-09"
+  kind: Computer vision
+  stage: Model exploration
+  language: Jupyter Notebook
+  date: "2024-10-02"
 
-- id: scrabble-solver
-  title: Cheating at Scrabble
-  subtitle: Implementing a function that prints all valid Scrabble words given a set of letters
-  url: https://github.com/andrewabrahamian/scrabble
-  image: projects/scrabble.jpg
-  tags:
-    - algorithms
-    - python
-  date: "2022-09-22"
-
-- id: imdb-sentiment-embeddings
-  title: Training Language Models for Sentiment Classification
-  subtitle: Training language models to classify sentiment of IMDB movie reviews with learned embeddings
+- id: text-embeddings
+  title: Sentiment Classification with Text Embeddings
+  subtitle: Language model and embedding experiments for IMDB movie review sentiment classification.
   url: https://github.com/andrewabrahamian/text_embeddings
+  repo: andrewabrahamian/text_embeddings
   image: projects/text_embeddings.jpg
   tags:
     - nlp
     - embeddings
     - deep-learning
-  date: "2022-07-14"
+  kind: NLP modeling
+  stage: Model exploration
+  language: Jupyter Notebook
+  date: "2025-05-02"
+
+- id: scrabble-solver
+  title: Scrabble Solver
+  subtitle: A Python algorithm that finds valid Scrabble words from a given set of letters.
+  url: https://github.com/andrewabrahamian/scrabble
+  repo: andrewabrahamian/scrabble
+  image: projects/scrabble.jpg
+  tags:
+    - algorithms
+    - python
+  kind: Algorithm exercise
+  stage: Utility
+  language: Python
+  date: "2024-10-02"

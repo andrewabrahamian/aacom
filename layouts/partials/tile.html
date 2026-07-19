@@ -1,4 +1,4 @@
-<section id="one" class="tiles" aria-label="Project list">
+<section id="project-tiles-static" class="tiles fallback-tiles" aria-label="Project list" data-fallback-tiles>
   {{ range .Site.Params.Tiles.showcase }}
   <article>
     {{ if .image }}

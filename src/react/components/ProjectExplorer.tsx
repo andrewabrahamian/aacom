@@ -1,149 +1,138 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 
 type Project = {
   id?: string;
   title: string;
   subtitle: string;
   url: string;
-  image?: string;
+  repo?: string;
   tags?: string[];
   date?: string;
   featured?: boolean;
+  kind?: string;
+  stage?: string;
+  language?: string;
 };
 
-type SortKey = "featured" | "newest" | "alphabetical";
+type ProfileLink = {
+  label: string;
+  url: string;
+};
+
+type Profile = {
+  name?: string;
+  headline?: string;
+  avatar?: string;
+  summary?: string;
+  links?: ProfileLink[];
+  pillars?: string[];
+};
 
 type Props = {
   projects: Project[];
+  profile?: Profile;
 };
 
-function normalize(text: string): string {
-  return text.trim().toLowerCase();
+const defaultProfile: Required<Pick<Profile, "name" | "headline" | "summary">> = {
+  name: "Andrew Abrahamian",
+  headline: "AI infrastructure research, strategy, and applied ML",
+  summary:
+    "I work on AI infrastructure research and competitive strategy, with personal projects spanning NLP, ML systems, decision tools, and durable research workflows."
+};
+
+function hasAnyTag(project: Project, tags: string[]): boolean {
+  return tags.some((tag) => project.tags?.includes(tag));
 }
 
-export function ProjectExplorer({ projects }: Props) {
-  const [query, setQuery] = useState("");
-  const [selectedTag, setSelectedTag] = useState("all");
-  const [sortBy, setSortBy] = useState<SortKey>("featured");
+function sortProjects(projects: Project[]): Project[] {
+  return [...projects].sort((a, b) => {
+    if (a.featured !== b.featured) return a.featured ? -1 : 1;
+    const aTime = a.date ? new Date(a.date).getTime() : 0;
+    const bTime = b.date ? new Date(b.date).getTime() : 0;
+    return bTime - aTime;
+  });
+}
 
-  const allTags = useMemo(() => {
-    const tags = new Set<string>();
-    projects.forEach((project) => {
-      (project.tags ?? []).forEach((tag) => tags.add(tag));
-    });
-    return ["all", ...Array.from(tags).sort((a, b) => a.localeCompare(b))];
-  }, [projects]);
+export function ProjectExplorer({ projects, profile }: Props) {
+  const mergedProfile = { ...defaultProfile, ...profile };
+  const sortedProjects = useMemo(() => sortProjects(projects), [projects]);
 
-  const filteredProjects = useMemo(() => {
-    const queryValue = normalize(query);
-
-    const filtered = projects.filter((project) => {
-      const matchesTag = selectedTag === "all" || (project.tags ?? []).includes(selectedTag);
-      const searchable = [project.title, project.subtitle, ...(project.tags ?? [])]
-        .join(" ")
-        .toLowerCase();
-      const matchesQuery = queryValue.length === 0 || searchable.includes(queryValue);
-      return matchesTag && matchesQuery;
-    });
-
-    return filtered.sort((a, b) => {
-      if (sortBy === "alphabetical") {
-        return a.title.localeCompare(b.title);
-      }
-
-      if (sortBy === "newest") {
-        const aTime = a.date ? new Date(a.date).getTime() : 0;
-        const bTime = b.date ? new Date(b.date).getTime() : 0;
-        return bTime - aTime;
-      }
-
-      if (a.featured !== b.featured) {
-        return a.featured ? -1 : 1;
-      }
-      return a.title.localeCompare(b.title);
-    });
-  }, [projects, query, selectedTag, sortBy]);
+  const projectGroups = useMemo(
+    () =>
+      [
+        {
+          title: "Infrastructure and research systems",
+          projects: sortedProjects.filter((project) =>
+            hasAnyTag(project, ["ai-infrastructure", "knowledge-systems", "research-systems", "competitive-intelligence", "automation", "codex"])
+          )
+        },
+        {
+          title: "Machine learning and NLP",
+          projects: sortedProjects.filter((project) =>
+            hasAnyTag(project, ["llm", "nlp", "machine-learning", "deep-learning", "computer-vision", "embeddings"])
+          )
+        },
+        {
+          title: "Products and utilities",
+          projects: sortedProjects.filter((project) => hasAnyTag(project, ["product", "fintech", "algorithms", "prototype", "mlops"]))
+        }
+      ].filter((group) => group.projects.length > 0),
+    [sortedProjects]
+  );
 
   return (
-    <div className="project-explorer-app" role="region" aria-label="Interactive project explorer">
-      <div className="project-controls">
-        <label className="project-control">
-          <span>Search</span>
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Find by topic, project, or skill"
-            aria-label="Search projects"
-          />
-        </label>
+    <div className="site-demo-app ledger-app" role="region" aria-label="Andrew Abrahamian portfolio">
+      <article className="demo-surface ledger-surface">
+        <header className="ledger-header">
+          <div>
+            <h1>{mergedProfile.name}</h1>
+            <p>{mergedProfile.headline}</p>
+          </div>
+          {mergedProfile.avatar ? <img src={mergedProfile.avatar} alt="" /> : null}
+        </header>
 
-        <label className="project-control">
-          <span>Tag</span>
-          <select
-            value={selectedTag}
-            onChange={(event) => setSelectedTag(event.target.value)}
-            aria-label="Filter projects by tag"
-          >
-            {allTags.map((tag) => (
-              <option key={tag} value={tag}>
-                {tag === "all" ? "All tags" : tag}
-              </option>
+        <section className="ledger-copy" aria-label="Profile summary">
+          <ul>
+            <li>{mergedProfile.summary}</li>
+            {(mergedProfile.pillars ?? []).map((pillar) => (
+              <li key={pillar}>{pillar}</li>
             ))}
-          </select>
-        </label>
+          </ul>
+        </section>
 
-        <label className="project-control">
-          <span>Sort</span>
-          <select value={sortBy} onChange={(event) => setSortBy(event.target.value as SortKey)} aria-label="Sort projects">
-            <option value="featured">Featured</option>
-            <option value="newest">Newest</option>
-            <option value="alphabetical">A-Z</option>
-          </select>
-        </label>
-
-        <button
-          type="button"
-          className="button small"
-          onClick={() => {
-            setQuery("");
-            setSelectedTag("all");
-            setSortBy("featured");
-          }}
-        >
-          Clear
-        </button>
-      </div>
-
-      {filteredProjects.length === 0 ? (
-        <p className="project-empty">No projects match your filters.</p>
-      ) : (
-        <div className="project-grid">
-          {filteredProjects.map((project) => (
-            <article key={project.id ?? project.title} className="project-card">
-              {project.image ? (
-                <a href={project.url} className="project-card-image-link" aria-label={`Open ${project.title}`}>
-                  <img src={`/img/${project.image}`} alt={project.title} className="project-card-image" />
-                </a>
-              ) : null}
-
-              <div className="project-card-body">
-                <h3>
-                  <a href={project.url}>{project.title}</a>
-                </h3>
-                <p>{project.subtitle}</p>
-                {project.tags && project.tags.length > 0 ? (
-                  <ul className="project-tag-list" aria-label="Project tags">
-                    {project.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
-                    ))}
-                  </ul>
-                ) : null}
-              </div>
-            </article>
+        <section className="ledger-projects" aria-labelledby="ledger-projects-heading">
+          <h2 id="ledger-projects-heading">Projects</h2>
+          {projectGroups.map((group) => (
+            <div className="ledger-group" key={group.title}>
+              <h3>{group.title}</h3>
+              <ol>
+                {group.projects.map((project) => (
+                  <li key={project.id ?? project.title}>
+                    <a href={project.url}>{project.title}</a>
+                    <span>{project.subtitle}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
           ))}
-        </div>
-      )}
+        </section>
+
+        <ProfileLinks links={mergedProfile.links} />
+      </article>
     </div>
+  );
+}
+
+function ProfileLinks({ links }: { links?: ProfileLink[] }) {
+  if (!links?.length) return null;
+
+  return (
+    <nav className="profile-links" aria-label="Profile links">
+      {links.map((link) => (
+        <a key={link.url} href={link.url}>
+          {link.label}
+        </a>
+      ))}
+    </nav>
   );
 }

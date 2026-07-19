@@ -23,8 +23,8 @@ disqusShortname = ""
   description = "Portfolio/CV for andrew abrahamian"
 
   # Link custom assets relative to /static
-  custom_css = ["css/modern-theme.css"]
-  custom_js  = []
+  custom_css = ["css/modern-theme.css", "css/resume.css", "demo-assets/project-explorer.css"]
+  custom_js  = ["demo-assets/project-explorer.js"]
   favicon    = "favicon.ico"
 
   # Just a custom image variable, please define it in .md files for content.
@@ -40,14 +40,18 @@ disqusShortname = ""
   # Navigation Section
   [params.navigation]
     title = "andrew abrahamian"
-    subtitle = "STRATEGY, ANALYTICS, & DATA SCIENCE"
+    subtitle = "AI INFRASTRUCTURE, STRATEGY, & DATA SCIENCE"
     menu = "MENU"
     # Optional logo as brand stored in img/
     # logo = "logo.png"
 
     [[params.navigation.links]]
       name = "HOME"
-      url = "#"
+      url = "/"
+
+    [[params.navigation.links]]
+      name = "RESUME"
+      url = "resume"
 
     #[[params.navigation.links]]
     #  name = "About Me"
@@ -80,13 +84,13 @@ disqusShortname = ""
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
     title = "andrew abrahamian"
-    subtitle = "PORTFOLIO OF STRATEGY & DATA SCIENCE PROJECTS"
+    subtitle = "AI INFRASTRUCTURE RESEARCH, STRATEGY, AND APPLIED ML PROJECTS"
     buttonText = ""
 
 
   # Tiles Section
   [params.tiles]
-    enable = true
+    enable = false
     # Display your showcases here.
     [[params.tiles.showcase]]
       title = "DIVITIAE.AI"
@@ -303,7 +307,7 @@ disqusShortname = ""
 
     [[params.footer.social]]
       icon = "fa-file-text"
-      url= "https://github.com/andrewabrahamian/personal/blob/main/Andrew%20Abrahamian%20-%20Resume%20(26-04-14).pdf"
+      url= "/resume/"
       label = "Resume"
 
     [[params.footer.quicklinks]]

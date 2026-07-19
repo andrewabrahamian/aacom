@@ -7,18 +7,41 @@ type Project = {
   title: string;
   subtitle: string;
   url: string;
+  repo?: string;
   image?: string;
   tags?: string[];
   date?: string;
   featured?: boolean;
+  kind?: string;
+  stage?: string;
+  language?: string;
+};
+
+type Profile = {
+  name?: string;
+  handle?: string;
+  headline?: string;
+  location?: string;
+  avatar?: string;
+  summary?: string;
+  stats?: Array<{ label: string; value: string }>;
+  links?: Array<{ label: string; url: string }>;
+  pillars?: string[];
 };
 
 const rootElement = document.getElementById("project-explorer-root");
 const payloadElement = document.getElementById("project-data");
+const profileElement = document.getElementById("profile-data");
+
+function parsePayload<T>(text: string): T {
+  const parsed = JSON.parse(text);
+  return typeof parsed === "string" ? (JSON.parse(parsed) as T) : (parsed as T);
+}
 
 if (rootElement && payloadElement?.textContent) {
   try {
-    const projects = JSON.parse(payloadElement.textContent) as Project[];
+    const projects = parsePayload<Project[]>(payloadElement.textContent);
+    const profile = profileElement?.textContent ? parsePayload<Profile>(profileElement.textContent) : undefined;
     document.documentElement.classList.add("js-enhanced");
 
     const staticTarget = rootElement.dataset.staticTarget;
@@ -27,7 +50,7 @@ if (rootElement && payloadElement?.textContent) {
     }
 
     const root = createRoot(rootElement);
-    root.render(<ProjectExplorer projects={projects} />);
+    root.render(<ProjectExplorer projects={projects} profile={profile} />);
   } catch (error) {
     console.error("Failed to initialize project explorer", error);
   }

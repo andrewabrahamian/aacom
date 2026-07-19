@@ -1,0 +1,31 @@
+name: Andrew Abrahamian
+handle: andrewabrahamian
+headline: AI infrastructure research at Meta | data science at Berkeley
+location: Boston, MA
+avatar: /img/profile/avatar.jpg
+summary: I work in AI infrastructure research at Meta, leading competitive insights and strategy development across AI hardware and infrastructure. I also build personal projects spanning NLP, ML systems, decision tools, and research workflows.
+updated: "2026-07-09"
+stats:
+  - label: Public repos
+    value: "18"
+  - label: Current focus
+    value: AI infrastructure
+  - label: Training
+    value: UC Berkeley MIDS
+  - label: Location
+    value: Boston
+links:
+  - label: GitHub
+    url: https://github.com/andrewabrahamian
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/andrew-abrahamian
+  - label: X
+    url: https://x.com/armobrah
+  - label: Resume
+    url: /resume/
+  - label: Resume PDF
+    url: https://github.com/andrewabrahamian/personal/blob/main/Andrew%20Abrahamian%20-%20Resume%20(26-04-14).pdf
+pillars:
+  - Competitive strategy for AI compute and networking
+  - Applied ML, NLP, and generative AI systems
+  - Personal research infrastructure and decision workflows

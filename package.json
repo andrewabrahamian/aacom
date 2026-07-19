@@ -6,7 +6,7 @@
   "scripts": {
     "dev:react": "vite",
     "build:react": "vite build",
-    "build": "npm run build:react && hugo"
+    "build": "npm run build:react && hugo --cleanDestinationDir"
   },
   "dependencies": {
     "react": "^18.3.1",

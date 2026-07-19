@@ -9,14 +9,14 @@
 
       {{ partial "nav.html" . }}
 
-      {{ partial "banner.html" . }}
-
     {{ "<!-- Main -->" | safeHTML }}
       <div id="main">
 
         {{ if .Site.Params.Tiles.enable }}
           {{ partial "tile.html" . }}
         {{ end }}
+
+        {{ partial "project-explorer.html" . }}
 
         {{ if .Site.Params.Two.enable }}
           {{ partial "two.html" . }}

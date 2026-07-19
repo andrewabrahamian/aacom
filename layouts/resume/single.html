@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  {{ partial "header.html" . }}
+  <body class="resume-page">
+    <div id="wrapper">
+      {{ partial "nav.html" . }}
+
+      {{ $resume := .Site.Data.resume }}
+      <main id="main" class="resume-main">
+        <article class="resume-document" aria-labelledby="resume-title">
+          <header class="resume-hero">
+            <div>
+              <p class="resume-kicker">Resume</p>
+              <h1 id="resume-title">{{ $resume.name }}</h1>
+              <p class="resume-tagline">{{ $resume.tagline }}</p>
+              <p class="resume-subtagline">{{ $resume.subtagline }}</p>
+            </div>
+            <nav class="resume-actions" aria-label="Resume downloads">
+              {{ range $resume.actions }}
+                <a href="{{ .url | safeURL }}" target="_blank" rel="noopener">
+                  <span class="fa {{ .icon }}" aria-hidden="true"></span>
+                  <span>{{ .label }}</span>
+                </a>
+              {{ end }}
+            </nav>
+          </header>
+
+          <section class="resume-contact" aria-label="Contact details">
+            <span>{{ $resume.location }}</span>
+            {{ range $resume.contacts }}
+              {{ if .url }}
+                <a href="{{ .url | safeURL }}">{{ .text }}</a>
+              {{ else }}
+                <span>{{ .text }}</span>
+              {{ end }}
+            {{ end }}
+          </section>
+
+          <section class="resume-section" aria-labelledby="resume-capabilities">
+            <h2 id="resume-capabilities">Analytical & Strategic Capabilities</h2>
+            <ul class="resume-capability-list">
+              {{ range $resume.capabilities }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </section>
+
+          <section class="resume-section" aria-labelledby="resume-experience">
+            <h2 id="resume-experience">Work & Leadership Experience</h2>
+            <div class="resume-timeline">
+              {{ range $resume.experience }}
+                <section class="resume-entry">
+                  <header class="resume-entry-header">
+                    <div>
+                      <h3>{{ .company }}</h3>
+                      <p>{{ .location }}</p>
+                    </div>
+                  </header>
+
+                  {{ range .roles }}
+                    <div class="resume-role">
+                      <div class="resume-role-header">
+                        <h4>{{ .title }}</h4>
+                        <span>{{ .dates }}</span>
+                      </div>
+                      {{ with .bullets }}
+                        <ul>
+                          {{ range . }}
+                            <li>{{ . }}</li>
+                          {{ end }}
+                        </ul>
+                      {{ end }}
+                    </div>
+                  {{ end }}
+
+                  {{ with .bullets }}
+                    <ul class="resume-entry-bullets">
+                      {{ range . }}
+                        <li>{{ . }}</li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                </section>
+              {{ end }}
+            </div>
+          </section>
+
+          <section class="resume-section" aria-labelledby="resume-education">
+            <h2 id="resume-education">Education</h2>
+            <div class="resume-education-list">
+              {{ range $resume.education }}
+                <section class="resume-education">
+                  <div class="resume-role-header">
+                    <div>
+                      <h3>{{ .institution }}</h3>
+                      <p>{{ .location }}</p>
+                    </div>
+                    <span>{{ .dates }}</span>
+                  </div>
+                  <p class="resume-credential">{{ .credential }}</p>
+                  {{ with .bullets }}
+                    <ul>
+                      {{ range . }}
+                        <li>{{ . }}</li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                </section>
+              {{ end }}
+            </div>
+          </section>
+
+          <section class="resume-section" aria-labelledby="resume-skills">
+            <h2 id="resume-skills">Skills, Activities & Interests</h2>
+            <dl class="resume-skill-list">
+              {{ range $resume.skills }}
+                <div>
+                  <dt>{{ .label }}</dt>
+                  <dd>{{ .value }}</dd>
+                </div>
+              {{ end }}
+            </dl>
+          </section>
+        </article>
+      </main>
+
+      {{ if .Site.Params.Footer.enable }}
+        {{ partial "footer.html" . }}
+      {{ end }}
+    </div>
+
+    {{ partial "js.html" . }}
+  </body>
+</html>
