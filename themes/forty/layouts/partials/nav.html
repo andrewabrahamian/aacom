@@ -2,6 +2,10 @@
     <header id="header" class="alt">
         <a href="{{ .Site.BaseURL }}" class="logo">{{ if .Site.Params.Navigation.logo }}<img src="{{ .Site.Params.baseURL }}/img/{{ .Site.Params.Navigation.logo }}" alt="" />{{ else }}<strong>{{ .Site.Params.Navigation.title }}</strong> <span>{{ .Site.Params.Navigation.subtitle }}</span>{{ end }}</a>
         <nav>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme">
+                <span class="fa fa-moon-o theme-toggle-icon theme-toggle-icon-dark" aria-hidden="true"></span>
+                <span class="fa fa-sun-o theme-toggle-icon theme-toggle-icon-light" aria-hidden="true"></span>
+            </button>
             <a href="#menu">{{ .Site.Params.Navigation.menu }}</a>
         </nav>
     </header>

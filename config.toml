@@ -24,7 +24,7 @@ disqusShortname = ""
 
   # Link custom assets relative to /static
   custom_css = ["css/modern-theme.css", "css/resume.css", "demo-assets/project-explorer.css"]
-  custom_js  = ["demo-assets/project-explorer.js"]
+  custom_js  = ["demo-assets/project-explorer.js", "js/theme-toggle.js"]
   favicon    = "favicon.ico"
 
   # Just a custom image variable, please define it in .md files for content.

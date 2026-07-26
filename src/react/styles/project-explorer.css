@@ -12,6 +12,15 @@
   color: var(--demo-ink);
 }
 
+:root[data-theme="dark"] .site-demo-app {
+  --demo-ink: #f4efe6;
+  --demo-muted: #b9c2cf;
+  --demo-line: #334155;
+  --demo-paper: #101827;
+  --demo-teal: #5eead4;
+  --demo-blue: #93c5fd;
+}
+
 .site-demo-app * {
   box-sizing: border-box;
 }
@@ -23,6 +32,7 @@
   background: var(--demo-paper);
   padding: clamp(1.25rem, 5vw, 3.25rem);
   overflow-x: hidden;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .ledger-header {
@@ -171,6 +181,10 @@
   padding: 0.45rem 0.75rem;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+:root[data-theme="dark"] .profile-links a {
+  background: rgba(15, 23, 42, 0.74);
 }
 
 .profile-links a:hover,

@@ -10,6 +10,19 @@
   --hero-bottom: #142033;
 }
 
+:root[data-theme="dark"] {
+  --ink: #f4efe6;
+  --muted: #b9c2cf;
+  --surface: #172033;
+  --surface-soft: #1f2a3a;
+  --line: #334155;
+  --accent: #5eead4;
+  --accent-2: #f4a261;
+  --hero-top: #101827;
+  --hero-bottom: #0b1220;
+  color-scheme: dark;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -18,6 +31,11 @@ body {
   color: var(--ink);
   background: #f8f4ec;
   overflow-x: hidden;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+:root[data-theme="dark"] body {
+  background: #0b1220;
 }
 
 body,
@@ -62,6 +80,49 @@ h6 {
   white-space: nowrap;
 }
 
+#header nav {
+  align-items: center;
+}
+
+#header .theme-toggle {
+  display: inline-flex;
+  width: 2.65rem;
+  height: 2.65rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.25rem 0 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 0;
+  transition: background-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+}
+
+#header .theme-toggle:hover,
+#header .theme-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(94, 234, 212, 0.72);
+  color: #ffffff;
+}
+
+#header .theme-toggle-icon-light {
+  display: none;
+}
+
+:root[data-theme="dark"] #header .theme-toggle-icon-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] #header .theme-toggle-icon-light {
+  display: inline-block;
+}
+
 #banner.major {
   min-height: 45vh;
   background-image: linear-gradient(132deg, rgba(34, 48, 66, 0.88), rgba(20, 32, 51, 0.92)), url("/img/banner.jpg");
@@ -81,6 +142,10 @@ h6 {
 #project-explorer {
   background: #f8f4ec;
   animation: reveal-up 480ms ease both;
+}
+
+:root[data-theme="dark"] #project-explorer {
+  background: #0b1220;
 }
 
 #project-explorer .inner {
@@ -107,6 +172,10 @@ h6 {
   border-top: 1px solid var(--line);
 }
 
+:root[data-theme="dark"] #contact {
+  background: #101827;
+}
+
 #footer {
   background: #0f172a;
 }
@@ -114,6 +183,11 @@ h6 {
 #footer .copyright,
 #footer .icons a {
   color: rgba(241, 245, 249, 0.9);
+}
+
+:root[data-theme="dark"] #footer {
+  background: #050816;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
 }
 
 .button,
@@ -139,5 +213,12 @@ input[type="button"] {
   * {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  #header .theme-toggle {
+    width: 2.35rem;
+    height: 2.35rem;
   }
 }
